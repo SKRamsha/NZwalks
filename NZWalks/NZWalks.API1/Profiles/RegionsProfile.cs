@@ -1,6 +1,13 @@
-﻿namespace NZWalks.API1.Profiles
+﻿using AutoMapper;
+
+namespace NZWalks.API1.Profiles
 {
-    public class RegionsProfile
+    public class RegionsProfile : Profile
     {
+        public RegionsProfile()
+        {
+            CreateMap<Models.Domain.Region, Models.DTO.Region>()
+               .ReverseMap();
+        }
     }
 }
